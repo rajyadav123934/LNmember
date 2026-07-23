@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NGO Membership Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<img src="logo.png" class="logo">
+
+<h1>Lakshmi Narayan Harikripa Sewa Sansthan</h1>
+
+<p>Online Membership Form</p>
+
+</div>
+
+<form id="membershipForm">
+
+<label>Membership ID</label>
+<input type="text" id="memberId" readonly>
+
+<label>Date</label>
+<input type="date" id="date">
+
+<label>Full Name</label>
+<input type="text" id="name" required>
+
+<label>Father / Husband Name</label>
+<input type="text" id="father">
+
+<label>Mobile Number</label>
+<input type="tel" id="mobile">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Address</label>
+<textarea id="address"></textarea>
+
+<label>Membership Type</label>
+
+<select id="type">
+
+<option value="1101">₹1101 Annual Member</option>
+
+<option value="2100">₹2100 Active Member</option>
+
+<option value="5100">₹5100 Life Member</option>
+
+</select>
+
+<label>Photo</label>
+
+<input type="file" id="photo" accept="image/*">
+
+<div class="buttons">
+
+<button type="button" id="previewBtn">
+Generate Receipt
+</button>
+
+<button type="button" id="downloadBtn">
+Download PDF
+</button>
+
+</div>
+
+</form>
+
+<div id="receipt" class="receipt">
+
+<h2>Membership Receipt</h2>
+
+<hr>
+
+<p><strong>Membership ID :</strong>
+<span id="r_id"></span></p>
+
+<p><strong>Name :</strong>
+<span id="r_name"></span></p>
+
+<p><strong>Father/Husband :</strong>
+<span id="r_father"></span></p>
+
+<p><strong>Mobile :</strong>
+<span id="r_mobile"></span></p>
+
+<p><strong>Email :</strong>
+<span id="r_email"></span></p>
+
+<p><strong>Address :</strong>
+<span id="r_address"></span></p>
+
+<p><strong>Membership :</strong>
+<span id="r_type"></span></p>
+
+<p><strong>Date :</strong>
+<span id="r_date"></span></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
